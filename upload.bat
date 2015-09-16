@@ -1,0 +1,1 @@
+curl -vX POST https://user:pwd@user.cloudant.com/cars/_bulk_docs -d @- -k -# -o output -H "Content-Type: application/json" < data.json
