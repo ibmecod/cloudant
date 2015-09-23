@@ -29,11 +29,14 @@ $(function() {
                                 $("a[href^='http://CLOUDANTURL']").each(function() { 
                                         this.href = this.href.replace(/http:\/\/cloudanturl/, mycloudanturl);
                                 });
-                                        
- 							$(".TEXTCLOUDANTURL").text(function () {
-    								return $(this).text().replace("http://TEXTCLOUDANTURL", mycloudanturl); 
-							});
                                 
+                                
+                                $(".TEXTCLOUDANTURL").text(function () {
+    								return $(this).text().replace("http://TEXTCLOUDANTURL", mycloudanturl); 
+								});
+                                
+                               $(".TEXTCLOUDANTURL").css("fontSize", "10px");
+                                                     
                 });
                                 
                                 
@@ -177,12 +180,13 @@ div.c12 {margin-left: 80px;}
       </ul>
 
       <p class="c2">The batchfile would look like this..
-      <code>
-        <span class="c9">
-      	curl -vX POST <div class="TEXTCLOUDANTURL">http://TEXTCLOUDANTURL/cars/_bulk_docs -d @- -k -# -o output -H"Content-Type: application/json" &lt;data.json</div>
-      	</span> 
-      </code>
-
+      	 <code>
+        	<span class="c9">
+      			curl -vX POST <div class="TEXTCLOUDANTURL">http://TEXTCLOUDANTURL/cars/_bulk_docs -d @- -k -# -o output -H"Content-Type: application/json" &lt;data.json</div>
+      		</span> 
+      	</code>
+	  </p>
+	  
       <p class="c1">Step 2d - Check if you have <span class="c3">curl</span> installed by
       typing <span class="c3">curl</span> at command line&nbsp;</p>
 
@@ -352,7 +356,7 @@ div.c12 {margin-left: 80px;}
       target="_blank">
 
       <div id="id1">
-        <div class="TEXTCLOUDANTURL">http://TEXTCLOUDANTURL</div>/cars/_design/query/_view/make?group=true&amp;key="BMW"</div>
+        <div class="TEXTCLOUDANTURL">http://TEXTCLOUDANTURL/cars/_design/query/_view/make?group=true&amp;key="BMW"</div>
 	  </a>
 
       <p class="c11">Should receive a response similar to the following.</p>
